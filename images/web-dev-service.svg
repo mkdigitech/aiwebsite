@@ -1,0 +1,68 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 300" width="300" height="300">
+  <!-- Background -->
+  <rect width="300" height="300" fill="#f5f8ff" rx="20" ry="20" />
+  
+  <!-- Laptop Base -->
+  <rect x="50" y="150" width="200" height="10" rx="2" ry="2" fill="#3a5999" />
+  <rect x="120" y="160" width="60" height="5" rx="2" ry="2" fill="#3a5999" />
+  
+  <!-- Laptop Screen -->
+  <rect x="60" y="80" width="180" height="120" rx="5" ry="5" fill="#4267b2" />
+  <rect x="70" y="90" width="160" height="100" rx="2" ry="2" fill="#ffffff" />
+  
+  <!-- Code on Screen -->
+  <g transform="translate(80, 100)" font-family="monospace" font-size="8">
+    <!-- HTML Structure -->
+    <text x="0" y="10" fill="#ff6b6b">&lt;!DOCTYPE html&gt;</text>
+    <text x="0" y="20" fill="#ff6b6b">&lt;html&gt;</text>
+    <text x="10" y="30" fill="#ff6b6b">&lt;head&gt;</text>
+    <text x="20" y="40" fill="#4267b2">&lt;title&gt;MKDigital&lt;/title&gt;</text>
+    <text x="10" y="50" fill="#ff6b6b">&lt;/head&gt;</text>
+    <text x="10" y="60" fill="#ff6b6b">&lt;body&gt;</text>
+    <text x="20" y="70" fill="#ff6b6b">&lt;div <tspan fill="#5273b7">class="container"</tspan>&gt;</text>
+    <text x="30" y="80" fill="#4267b2">// Website content</text>
+    <text x="20" y="90" fill="#ff6b6b">&lt;/div&gt;</text>
+    <text x="10" y="100" fill="#ff6b6b">&lt;/body&gt;</text>
+    <text x="0" y="110" fill="#ff6b6b">&lt;/html&gt;</text>
+  </g>
+  
+  <!-- Decorative Elements -->
+  <g>
+    <!-- Browser Controls -->
+    <circle cx="80" cy="100" r="3" fill="#ff6b6b" />
+    <circle cx="90" cy="100" r="3" fill="#ffdd59" />
+    <circle cx="100" cy="100" r="3" fill="#5cb85c" />
+    
+    <!-- Cursor -->
+    <rect x="140" y="170" width="2" height="10" fill="#3a5999">
+      <animate attributeName="opacity" values="1;0;1" dur="1.5s" repeatCount="indefinite" />
+    </rect>
+  </g>
+  
+  <!-- Mobile Device -->
+  <rect x="200" y="120" width="30" height="50" rx="3" ry="3" fill="#3a5999" />
+  <rect x="203" y="125" width="24" height="35" rx="1" ry="1" fill="#ffffff" />
+  <circle cx="215" cy="165" r="3" fill="#ffffff" stroke="#3a5999" stroke-width="0.5" />
+  
+  <!-- Tablet Device -->
+  <rect x="40" y="120" width="40" height="60" rx="3" ry="3" fill="#3a5999" />
+  <rect x="43" y="125" width="34" height="50" rx="1" ry="1" fill="#ffffff" />
+  <circle cx="60" cy="180" r="2" fill="#ffffff" />
+  
+  <!-- Connecting Lines -->
+  <path d="M 60 150 L 150 150 L 215 150" fill="none" stroke="#5273b7" stroke-width="1" stroke-dasharray="3,2" />
+  
+  <!-- Title -->
+  <text x="150" y="220" font-family="Arial" font-size="16" font-weight="bold" fill="#3a5999" text-anchor="middle">Website Development</text>
+  <text x="150" y="240" font-family="Arial" font-size="12" fill="#5273b7" text-anchor="middle">Responsive • Modern • Optimized</text>
+  
+  <!-- Decorative Icons -->
+  <g transform="translate(90, 260)">
+    <text font-family="Arial" font-size="14" fill="#3a5999" text-anchor="middle">
+      <tspan x="0" y="0">HTML5</tspan>
+      <tspan x="40" y="0">CSS3</tspan>
+      <tspan x="80" y="0">JS</tspan>
+      <tspan x="120" y="0">React</tspan>
+    </text>
+  </g>
+</svg>

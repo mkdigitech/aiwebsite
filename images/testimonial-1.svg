@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="200" height="200">
+  <!-- Background Circle -->
+  <circle cx="100" cy="100" r="100" fill="#f5f8ff"/>
+  
+  <!-- Quote Symbol -->
+  <text x="50" y="70" font-family="Arial" font-size="80" fill="#4267b2" opacity="0.3">"</text>
+  
+  <!-- Person Silhouette -->
+  <g transform="translate(100, 100) scale(0.6)">
+    <!-- Head -->
+    <circle cx="0" cy="0" r="40" fill="#4267b2"/>
+    
+    <!-- Body -->
+    <path d="M -40 70 C -40 50, 40 50, 40 70" fill="#4267b2"/>
+    
+    <!-- Face Features (simplified) -->
+    <circle cx="-15" cy="-10" r="5" fill="white"/>
+    <circle cx="15" cy="-10" r="5" fill="white"/>
+    <path d="M -15 15 C -5 25, 5 25, 15 15" fill="none" stroke="white" stroke-width="3"/>
+  </g>
+  
+  <!-- Testimonial Text -->
+  <text x="100" y="150" font-family="Arial" font-size="12" fill="#333" text-anchor="middle">"MKDigital transformed our</text>
+  <text x="100" y="165" font-family="Arial" font-size="12" fill="#333" text-anchor="middle">online presence completely!"</text>
+  
+  <!-- Name -->
+  <text x="100" y="185" font-family="Arial" font-size="14" font-weight="bold" fill="#4267b2" text-anchor="middle">Rajesh Kumar</text>
+</svg>

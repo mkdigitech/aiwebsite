@@ -1,0 +1,91 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 300" width="300" height="300">
+  <!-- Background -->
+  <rect width="300" height="300" fill="#f5f8ff" rx="20" ry="20" />
+  
+  <!-- Central Hub -->
+  <circle cx="150" cy="150" r="50" fill="#4267b2" />
+  <circle cx="150" cy="150" r="45" fill="#5273b7" />
+  <text x="150" y="155" font-family="Arial" font-size="14" font-weight="bold" fill="#ffffff" text-anchor="middle">MK</text>
+  
+  <!-- Social Media Platforms -->
+  <!-- Facebook -->
+  <g transform="translate(70, 70)">
+    <circle cx="0" cy="0" r="25" fill="#3b5998" />
+    <text x="0" y="5" font-family="Arial" font-size="20" font-weight="bold" fill="#ffffff" text-anchor="middle">f</text>
+    <!-- Connection to Center -->
+    <line x1="25" y1="25" x2="65" y2="65" stroke="#3b5998" stroke-width="2" stroke-dasharray="3,2" />
+  </g>
+  
+  <!-- Twitter/X -->
+  <g transform="translate(230, 70)">
+    <circle cx="0" cy="0" r="25" fill="#000000" />
+    <text x="0" y="5" font-family="Arial" font-size="20" font-weight="bold" fill="#ffffff" text-anchor="middle">𝕏</text>
+    <!-- Connection to Center -->
+    <line x1="-25" y1="25" x2="-65" y2="65" stroke="#000000" stroke-width="2" stroke-dasharray="3,2" />
+  </g>
+  
+  <!-- Instagram -->
+  <g transform="translate(70, 230)">
+    <circle cx="0" cy="0" r="25" fill="#c13584" />
+    <circle cx="0" cy="0" r="20" fill="none" stroke="#ffffff" stroke-width="2" />
+    <circle cx="10" cy="-10" r="5" fill="#ffffff" />
+    <!-- Connection to Center -->
+    <line x1="25" y1="-25" x2="65" y2="-65" stroke="#c13584" stroke-width="2" stroke-dasharray="3,2" />
+  </g>
+  
+  <!-- LinkedIn -->
+  <g transform="translate(230, 230)">
+    <circle cx="0" cy="0" r="25" fill="#0077b5" />
+    <text x="0" y="5" font-family="Arial" font-size="20" font-weight="bold" fill="#ffffff" text-anchor="middle">in</text>
+    <!-- Connection to Center -->
+    <line x1="-25" y1="-25" x2="-65" y2="-65" stroke="#0077b5" stroke-width="2" stroke-dasharray="3,2" />
+  </g>
+  
+  <!-- Data Flow Animation -->
+  <g>
+    <!-- Facebook Data Flow -->
+    <circle cx="85" cy="85" r="3" fill="#3b5998">
+      <animate attributeName="cx" values="85;135" dur="2s" repeatCount="indefinite" />
+      <animate attributeName="cy" values="85;135" dur="2s" repeatCount="indefinite" />
+      <animate attributeName="opacity" values="1;0.5;0" dur="2s" repeatCount="indefinite" />
+    </circle>
+    
+    <!-- Twitter Data Flow -->
+    <circle cx="215" cy="85" r="3" fill="#000000">
+      <animate attributeName="cx" values="215;165" dur="1.8s" repeatCount="indefinite" />
+      <animate attributeName="cy" values="85;135" dur="1.8s" repeatCount="indefinite" />
+      <animate attributeName="opacity" values="1;0.5;0" dur="1.8s" repeatCount="indefinite" />
+    </circle>
+    
+    <!-- Instagram Data Flow -->
+    <circle cx="85" cy="215" r="3" fill="#c13584">
+      <animate attributeName="cx" values="85;135" dur="2.2s" repeatCount="indefinite" />
+      <animate attributeName="cy" values="215;165" dur="2.2s" repeatCount="indefinite" />
+      <animate attributeName="opacity" values="1;0.5;0" dur="2.2s" repeatCount="indefinite" />
+    </circle>
+    
+    <!-- LinkedIn Data Flow -->
+    <circle cx="215" cy="215" r="3" fill="#0077b5">
+      <animate attributeName="cx" values="215;165" dur="1.9s" repeatCount="indefinite" />
+      <animate attributeName="cy" values="215;165" dur="1.9s" repeatCount="indefinite" />
+      <animate attributeName="opacity" values="1;0.5;0" dur="1.9s" repeatCount="indefinite" />
+    </circle>
+  </g>
+  
+  <!-- Engagement Metrics -->
+  <g transform="translate(150, 220)">
+    <rect x="-60" y="0" width="120" height="30" rx="5" ry="5" fill="#4267b2" opacity="0.8" />
+    <text x="0" y="20" font-family="Arial" font-size="12" fill="#ffffff" text-anchor="middle">Engagement • Reach • Conversion</text>
+  </g>
+  
+  <!-- Title -->
+  <text x="150" y="270" font-family="Arial" font-size="16" font-weight="bold" fill="#3a5999" text-anchor="middle">Social Media Marketing</text>
+  
+  <!-- Decorative Elements -->
+  <g opacity="0.2">
+    <circle cx="50" cy="50" r="10" fill="#3a5999" />
+    <circle cx="250" cy="50" r="10" fill="#3a5999" />
+    <circle cx="50" cy="250" r="10" fill="#3a5999" />
+    <circle cx="250" cy="250" r="10" fill="#3a5999" />
+  </g>
+</svg>

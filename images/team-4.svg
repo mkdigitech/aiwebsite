@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="200" height="200">
+  <!-- Background Circle -->
+  <circle cx="100" cy="100" r="100" fill="#f5f8ff"/>
+  
+  <!-- Person Silhouette -->
+  <g>
+    <!-- Head -->
+    <circle cx="100" cy="70" r="40" fill="#5273b7"/>
+    
+    <!-- Body -->
+    <path d="M 60 140 C 60 120, 140 120, 140 140" fill="#5273b7"/>
+    
+    <!-- Face Features (simplified) -->
+    <circle cx="85" cy="60" r="5" fill="white"/>
+    <circle cx="115" cy="60" r="5" fill="white"/>
+    <path d="M 85 85 C 95 95, 105 95, 115 85" fill="none" stroke="white" stroke-width="3"/>
+    
+    <!-- Beard -->
+    <path d="M 80 90 C 90 110, 110 110, 120 90" fill="#222" stroke="#222" stroke-width="1"/>
+    
+    <!-- Turban -->
+    <path d="M 60 40 C 70 10, 130 10, 140 40" fill="#3a5999" stroke="#3a5999" stroke-width="1"/>
+    <path d="M 60 40 C 70 50, 130 50, 140 40" fill="#3a5999" stroke="#3a5999" stroke-width="1"/>
+    <circle cx="100" cy="25" r="5" fill="#f5f8ff"/>
+  </g>
+  
+  <!-- Decorative Elements -->
+  <g>
+    <!-- Company Logo Placeholder -->
+    <rect x="75" y="150" width="50" height="20" rx="5" ry="5" fill="#3a5999"/>
+    <text x="100" y="165" font-family="Arial" font-size="10" fill="white" text-anchor="middle">MKDigital</text>
+  </g>
+  
+  <!-- Name Label -->
+  <text x="100" y="185" font-family="Arial" font-size="14" font-weight="bold" fill="#333" text-anchor="middle">Gurpreet Singh</text>
+</svg>

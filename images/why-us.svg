@@ -1,0 +1,95 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" width="800" height="600">
+  <!-- Background -->
+  <rect width="800" height="600" fill="#f5f8ff"/>
+  
+  <!-- Comparison Chart -->
+  <g>
+    <!-- Chart Header -->
+    <rect x="100" y="100" width="600" height="60" fill="#3a5ca8" rx="5" ry="5"/>
+    <text x="400" y="140" font-family="Arial" font-size="24" font-weight="bold" fill="white" text-anchor="middle">Why Choose MKDigital?</text>
+    
+    <!-- Column Headers -->
+    <rect x="100" y="160" width="200" height="50" fill="#4d62a3" rx="5" ry="5"/>
+    <text x="200" y="190" font-family="Arial" font-size="18" fill="white" text-anchor="middle">Feature</text>
+    
+    <rect x="300" y="160" width="200" height="50" fill="#5273b7" rx="5" ry="5"/>
+    <text x="400" y="190" font-family="Arial" font-size="18" fill="white" text-anchor="middle">MKDigital</text>
+    
+    <rect x="500" y="160" width="200" height="50" fill="#6b8ac9" rx="5" ry="5"/>
+    <text x="600" y="190" font-family="Arial" font-size="18" fill="white" text-anchor="middle">Others</text>
+    
+    <!-- Row 1: AI Integration -->
+    <rect x="100" y="210" width="200" height="60" fill="#f0f5ff" rx="5" ry="5" stroke="#e0e0e0" stroke-width="1"/>
+    <text x="200" y="245" font-family="Arial" font-size="16" fill="#333" text-anchor="middle">AI Integration</text>
+    
+    <rect x="300" y="210" width="200" height="60" fill="#f0f5ff" rx="5" ry="5" stroke="#e0e0e0" stroke-width="1"/>
+    <circle cx="400" cy="240" r="20" fill="#4CAF50"/>
+    <path d="M 390 240 L 395 245 L 410 230" stroke="white" stroke-width="3" fill="none"/>
+    
+    <rect x="500" y="210" width="200" height="60" fill="#f0f5ff" rx="5" ry="5" stroke="#e0e0e0" stroke-width="1"/>
+    <circle cx="600" cy="240" r="20" fill="#F44336"/>
+    <path d="M 590 230 L 610 250 M 590 250 L 610 230" stroke="white" stroke-width="3" fill="none"/>
+    
+    <!-- Row 2: Data-Driven Approach -->
+    <rect x="100" y="270" width="200" height="60" fill="#f0f5ff" rx="5" ry="5" stroke="#e0e0e0" stroke-width="1"/>
+    <text x="200" y="305" font-family="Arial" font-size="16" fill="#333" text-anchor="middle">Data-Driven Approach</text>
+    
+    <rect x="300" y="270" width="200" height="60" fill="#f0f5ff" rx="5" ry="5" stroke="#e0e0e0" stroke-width="1"/>
+    <circle cx="400" cy="300" r="20" fill="#4CAF50"/>
+    <path d="M 390 300 L 395 305 L 410 290" stroke="white" stroke-width="3" fill="none"/>
+    
+    <rect x="500" y="270" width="200" height="60" fill="#f0f5ff" rx="5" ry="5" stroke="#e0e0e0" stroke-width="1"/>
+    <circle cx="600" cy="300" r="20" fill="#FFC107"/>
+    <path d="M 600 290 L 600 300 M 600 310 L 600 310" stroke="white" stroke-width="3" fill="none"/>
+    <circle cx="600" cy="310" r="1" fill="white"/>
+    
+    <!-- Row 3: Personalized Strategy -->
+    <rect x="100" y="330" width="200" height="60" fill="#f0f5ff" rx="5" ry="5" stroke="#e0e0e0" stroke-width="1"/>
+    <text x="200" y="365" font-family="Arial" font-size="16" fill="#333" text-anchor="middle">Personalized Strategy</text>
+    
+    <rect x="300" y="330" width="200" height="60" fill="#f0f5ff" rx="5" ry="5" stroke="#e0e0e0" stroke-width="1"/>
+    <circle cx="400" cy="360" r="20" fill="#4CAF50"/>
+    <path d="M 390 360 L 395 365 L 410 350" stroke="white" stroke-width="3" fill="none"/>
+    
+    <rect x="500" y="330" width="200" height="60" fill="#f0f5ff" rx="5" ry="5" stroke="#e0e0e0" stroke-width="1"/>
+    <circle cx="600" cy="360" r="20" fill="#F44336"/>
+    <path d="M 590 350 L 610 370 M 590 370 L 610 350" stroke="white" stroke-width="3" fill="none"/>
+    
+    <!-- Row 4: 24/7 Support -->
+    <rect x="100" y="390" width="200" height="60" fill="#f0f5ff" rx="5" ry="5" stroke="#e0e0e0" stroke-width="1"/>
+    <text x="200" y="425" font-family="Arial" font-size="16" fill="#333" text-anchor="middle">24/7 Support</text>
+    
+    <rect x="300" y="390" width="200" height="60" fill="#f0f5ff" rx="5" ry="5" stroke="#e0e0e0" stroke-width="1"/>
+    <circle cx="400" cy="420" r="20" fill="#4CAF50"/>
+    <path d="M 390 420 L 395 425 L 410 410" stroke="white" stroke-width="3" fill="none"/>
+    
+    <rect x="500" y="390" width="200" height="60" fill="#f0f5ff" rx="5" ry="5" stroke="#e0e0e0" stroke-width="1"/>
+    <circle cx="600" cy="420" r="20" fill="#FFC107"/>
+    <path d="M 600 410 L 600 420 M 600 430 L 600 430" stroke="white" stroke-width="3" fill="none"/>
+    <circle cx="600" cy="430" r="1" fill="white"/>
+    
+    <!-- Row 5: ROI Tracking -->
+    <rect x="100" y="450" width="200" height="60" fill="#f0f5ff" rx="5" ry="5" stroke="#e0e0e0" stroke-width="1"/>
+    <text x="200" y="485" font-family="Arial" font-size="16" fill="#333" text-anchor="middle">ROI Tracking</text>
+    
+    <rect x="300" y="450" width="200" height="60" fill="#f0f5ff" rx="5" ry="5" stroke="#e0e0e0" stroke-width="1"/>
+    <circle cx="400" cy="480" r="20" fill="#4CAF50"/>
+    <path d="M 390 480 L 395 485 L 410 470" stroke="white" stroke-width="3" fill="none"/>
+    
+    <rect x="500" y="450" width="200" height="60" fill="#f0f5ff" rx="5" ry="5" stroke="#e0e0e0" stroke-width="1"/>
+    <circle cx="600" cy="480" r="20" fill="#F44336"/>
+    <path d="M 590 470 L 610 490 M 590 490 L 610 470" stroke="white" stroke-width="3" fill="none"/>
+  </g>
+  
+  <!-- Legend -->
+  <g>
+    <circle cx="250" cy="540" r="15" fill="#4CAF50"/>
+    <text x="275" y="545" font-family="Arial" font-size="14" fill="#333">Excellent</text>
+    
+    <circle cx="400" cy="540" r="15" fill="#FFC107"/>
+    <text x="425" y="545" font-family="Arial" font-size="14" fill="#333">Average</text>
+    
+    <circle cx="550" cy="540" r="15" fill="#F44336"/>
+    <text x="575" y="545" font-family="Arial" font-size="14" fill="#333">Poor</text>
+  </g>
+</svg>

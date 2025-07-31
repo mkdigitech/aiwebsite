@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="200" height="200">
+  <!-- Background Circle -->
+  <circle cx="100" cy="100" r="100" fill="#e6eeff"/>
+  
+  <!-- Person Silhouette -->
+  <g>
+    <!-- Head -->
+    <circle cx="100" cy="80" r="40" fill="#3a5ca8"/>
+    
+    <!-- Body -->
+    <path d="M 60 140 C 60 120, 140 120, 140 140" fill="#3a5ca8"/>
+    
+    <!-- Face Features (simplified) -->
+    <circle cx="85" cy="70" r="5" fill="white"/>
+    <circle cx="115" cy="70" r="5" fill="white"/>
+    <path d="M 85 95 C 95 105, 105 105, 115 95" fill="none" stroke="white" stroke-width="3"/>
+  </g>
+  
+  <!-- Decorative Elements -->
+  <g>
+    <!-- Company Logo Placeholder -->
+    <rect x="75" y="150" width="50" height="20" rx="5" ry="5" fill="#5273b7"/>
+    <text x="100" y="165" font-family="Arial" font-size="10" fill="white" text-anchor="middle">TechCorp</text>
+  </g>
+  
+  <!-- Name Label -->
+  <text x="100" y="185" font-family="Arial" font-size="14" font-weight="bold" fill="#333" text-anchor="middle">Rajiv Sharma</text>
+</svg>
