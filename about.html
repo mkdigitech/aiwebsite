@@ -1,0 +1,737 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Learn about MKDigital, the No.1 AI Marketing Agency in India. Discover our company history, meet our expert team, and find our contact information.">
+    <meta name="keywords" content="MKDigital, AI Marketing Agency India, Digital Marketing Team, Marketing Experts, About MKDigital">
+    <title>About Us - MKDigital | No.1 AI Marketing Agency in India</title>
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="images/favicon.ico">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    
+    <style>
+        /* Additional styles specific to about page */
+        .about-section {
+            padding: var(--spacing-xxl) 0;
+        }
+        
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: var(--spacing-xl);
+            align-items: center;
+        }
+        
+        .about-content h2 {
+            margin-bottom: var(--spacing-md);
+            font-size: 2.2rem;
+        }
+        
+        .about-content p {
+            margin-bottom: var(--spacing-md);
+            color: var(--gray-700);
+        }
+        
+        .about-image img {
+            width: 100%;
+            border-radius: var(--border-radius-lg);
+            box-shadow: var(--shadow-lg);
+        }
+        
+        .timeline {
+            position: relative;
+            max-width: 1200px;
+            margin: var(--spacing-xxl) auto;
+        }
+        
+        .timeline::after {
+            content: '';
+            position: absolute;
+            width: 6px;
+            background-color: var(--primary-color);
+            top: 0;
+            bottom: 0;
+            left: 50%;
+            margin-left: -3px;
+        }
+        
+        .timeline-item {
+            padding: 10px 40px;
+            position: relative;
+            width: 50%;
+            box-sizing: border-box;
+        }
+        
+        .timeline-item::after {
+            content: '';
+            position: absolute;
+            width: 25px;
+            height: 25px;
+            right: -13px;
+            background-color: white;
+            border: 4px solid var(--primary-color);
+            top: 15px;
+            border-radius: 50%;
+            z-index: 1;
+        }
+        
+        .timeline-left {
+            left: 0;
+        }
+        
+        .timeline-right {
+            left: 50%;
+        }
+        
+        .timeline-left::after {
+            right: -13px;
+        }
+        
+        .timeline-right::after {
+            left: -13px;
+        }
+        
+        .timeline-content {
+            padding: var(--spacing-lg);
+            background-color: white;
+            position: relative;
+            border-radius: var(--border-radius-md);
+            box-shadow: var(--shadow-md);
+        }
+        
+        .timeline-content h3 {
+            margin-bottom: var(--spacing-sm);
+            color: var(--primary-color);
+        }
+        
+        .timeline-content .date {
+            display: inline-block;
+            padding: 5px 10px;
+            background-color: var(--primary-color);
+            color: white;
+            border-radius: var(--border-radius-sm);
+            font-size: 0.8rem;
+            margin-bottom: var(--spacing-sm);
+        }
+        
+        .team-section {
+            padding: var(--spacing-xxl) 0;
+            background-color: var(--light-color);
+        }
+        
+        .team-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: var(--spacing-lg);
+        }
+        
+        .team-member {
+            background-color: white;
+            border-radius: var(--border-radius-lg);
+            overflow: hidden;
+            box-shadow: var(--shadow-md);
+            transition: all 0.3s ease;
+        }
+        
+        .team-member:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-lg);
+        }
+        
+        .team-member-image {
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .team-member-image img {
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+            display: block;
+            transition: all 0.5s ease;
+        }
+        
+        .team-member:hover .team-member-image img {
+            transform: scale(1.05);
+        }
+        
+        .team-member-content {
+            padding: var(--spacing-lg);
+            text-align: center;
+        }
+        
+        .team-member-content h3 {
+            margin-bottom: var(--spacing-xs);
+            font-size: 1.4rem;
+        }
+        
+        .team-member-position {
+            color: var(--primary-color);
+            font-size: 0.9rem;
+            margin-bottom: var(--spacing-md);
+            display: block;
+        }
+        
+        .team-member-social {
+            display: flex;
+            justify-content: center;
+            gap: var(--spacing-sm);
+        }
+        
+        .team-member-social a {
+            width: 36px;
+            height: 36px;
+            border-radius: 50%;
+            background-color: var(--light-color);
+            color: var(--gray-700);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s ease;
+        }
+        
+        .team-member-social a:hover {
+            background-color: var(--primary-color);
+            color: white;
+        }
+        
+        .values-section {
+            padding: var(--spacing-xxl) 0;
+        }
+        
+        .values-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: var(--spacing-lg);
+        }
+        
+        .value-card {
+            padding: var(--spacing-xl);
+            background-color: white;
+            border-radius: var(--border-radius-lg);
+            box-shadow: var(--shadow-md);
+            text-align: center;
+            transition: all 0.3s ease;
+        }
+        
+        .value-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-lg);
+        }
+        
+        .value-icon {
+            width: 70px;
+            height: 70px;
+            border-radius: 50%;
+            background-color: var(--light-color);
+            color: var(--primary-color);
+            font-size: 1.8rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto var(--spacing-md);
+        }
+        
+        .value-card h3 {
+            margin-bottom: var(--spacing-sm);
+            font-size: 1.4rem;
+        }
+        
+        @media (max-width: 992px) {
+            .about-grid {
+                grid-template-columns: 1fr;
+                gap: var(--spacing-xl);
+            }
+            
+            .timeline::after {
+                left: 31px;
+            }
+            
+            .timeline-item {
+                width: 100%;
+                padding-left: 70px;
+                padding-right: 25px;
+            }
+            
+            .timeline-item::after {
+                left: 18px;
+                right: auto;
+            }
+            
+            .timeline-left::after,
+            .timeline-right::after {
+                left: 18px;
+            }
+            
+            .timeline-right {
+                left: 0%;
+            }
+            
+            .values-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .values-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="navbar">
+                <a href="index.html" class="logo">MK<span>Digital</span></a>
+                
+                <ul class="nav-menu">
+                    <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
+                    <li class="nav-item"><a href="services.html" class="nav-link">Services</a></li>
+                    <li class="nav-item"><a href="portfolio.html" class="nav-link">Portfolio</a></li>
+                    <li class="nav-item"><a href="about.html" class="nav-link active">About</a></li>
+                    <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
+                    <li class="nav-item"><a href="contact.html" class="btn btn-primary btn-sm">Get a Quote</a></li>
+                </ul>
+                
+                <div class="hamburger">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Page Hero -->
+    <section class="about-hero">
+        <div class="container">
+            <h1>About Us</h1>
+            <p>Learn about our journey, our team, and our mission to revolutionize digital marketing with AI technology.</p>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about-section">
+        <div class="container">
+            <div class="about-grid">
+                <div class="about-content">
+                    <h2>Our Story</h2>
+                    <p>MKDigital was founded in 2015 with a vision to revolutionize the digital marketing landscape in India through the power of artificial intelligence. What began as a small team of three passionate marketers and AI enthusiasts has grown into India's leading AI marketing agency.</p>
+                    <p>Our journey started when our founders, Manish Kumar and Kavita Sharma, recognized the untapped potential of AI in transforming traditional marketing approaches. They believed that by combining cutting-edge AI technology with creative marketing strategies, they could help businesses achieve unprecedented growth and success in the digital realm.</p>
+                    <p>Today, MKDigital stands as a testament to that vision. We've helped hundreds of businesses across various industries leverage the power of AI to enhance their marketing efforts, increase their ROI, and establish a strong digital presence. Our commitment to innovation, excellence, and client success has earned us the reputation of being the No.1 AI Marketing Agency in India.</p>
+                    <a href="contact.html" class="btn btn-primary">Get in Touch</a>
+                </div>
+                
+                <div class="about-image">
+                    <img src="images/about-company.svg" alt="MKDigital Office">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Company Timeline -->
+    <section class="section">
+        <div class="container">
+            <div class="section-title">
+                <h2>Our Journey</h2>
+                <p>Key milestones in our growth and evolution</p>
+            </div>
+            
+            <div class="timeline">
+                <!-- Timeline Item 1 -->
+                <div class="timeline-item timeline-left">
+                    <div class="timeline-content">
+                        <span class="date">2015</span>
+                        <h3>Foundation</h3>
+                        <p>MKDigital was founded by Manish Kumar and Kavita Sharma with a vision to integrate AI into digital marketing.</p>
+                    </div>
+                </div>
+                
+                <!-- Timeline Item 2 -->
+                <div class="timeline-item timeline-right">
+                    <div class="timeline-content">
+                        <span class="date">2017</span>
+                        <h3>First Major Client</h3>
+                        <p>Secured our first major client, a leading e-commerce platform, and delivered exceptional results through our AI-powered SEO strategies.</p>
+                    </div>
+                </div>
+                
+                <!-- Timeline Item 3 -->
+                <div class="timeline-item timeline-left">
+                    <div class="timeline-content">
+                        <span class="date">2018</span>
+                        <h3>Team Expansion</h3>
+                        <p>Expanded our team to 25 professionals and moved to a larger office space in Bangalore's tech hub.</p>
+                    </div>
+                </div>
+                
+                <!-- Timeline Item 4 -->
+                <div class="timeline-item timeline-right">
+                    <div class="timeline-content">
+                        <span class="date">2019</span>
+                        <h3>Innovation Award</h3>
+                        <p>Received the "Most Innovative Digital Marketing Agency" award at the India Digital Summit.</p>
+                    </div>
+                </div>
+                
+                <!-- Timeline Item 5 -->
+                <div class="timeline-item timeline-left">
+                    <div class="timeline-content">
+                        <span class="date">2020</span>
+                        <h3>AI Research Division</h3>
+                        <p>Established a dedicated AI research division to develop proprietary marketing algorithms and tools.</p>
+                    </div>
+                </div>
+                
+                <!-- Timeline Item 6 -->
+                <div class="timeline-item timeline-right">
+                    <div class="timeline-content">
+                        <span class="date">2021</span>
+                        <h3>100th Client</h3>
+                        <p>Celebrated our 100th client success story and expanded our services to include AI agent solutions.</p>
+                    </div>
+                </div>
+                
+                <!-- Timeline Item 7 -->
+                <div class="timeline-item timeline-left">
+                    <div class="timeline-content">
+                        <span class="date">2022</span>
+                        <h3>International Expansion</h3>
+                        <p>Started serving international clients and opened a satellite office in Singapore.</p>
+                    </div>
+                </div>
+                
+                <!-- Timeline Item 8 -->
+                <div class="timeline-item timeline-right">
+                    <div class="timeline-content">
+                        <span class="date">2023</span>
+                        <h3>No.1 AI Marketing Agency</h3>
+                        <p>Recognized as the No.1 AI Marketing Agency in India by Digital Business Awards.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Our Values -->
+    <section class="values-section">
+        <div class="container">
+            <div class="section-title">
+                <h2>Our Core Values</h2>
+                <p>The principles that guide everything we do</p>
+            </div>
+            
+            <div class="values-grid">
+                <!-- Value 1 -->
+                <div class="value-card">
+                    <div class="value-icon">
+                        <i class="fas fa-lightbulb"></i>
+                    </div>
+                    <h3>Innovation</h3>
+                    <p>We constantly push the boundaries of what's possible in digital marketing by embracing new technologies and creative approaches.</p>
+                </div>
+                
+                <!-- Value 2 -->
+                <div class="value-card">
+                    <div class="value-icon">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <h3>Results-Driven</h3>
+                    <p>We measure our success by the tangible results we deliver for our clients, focusing on metrics that matter to their business growth.</p>
+                </div>
+                
+                <!-- Value 3 -->
+                <div class="value-card">
+                    <div class="value-icon">
+                        <i class="fas fa-handshake"></i>
+                    </div>
+                    <h3>Integrity</h3>
+                    <p>We operate with complete transparency, honesty, and ethical practices in all our client relationships and business operations.</p>
+                </div>
+                
+                <!-- Value 4 -->
+                <div class="value-card">
+                    <div class="value-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <h3>Collaboration</h3>
+                    <p>We believe in the power of teamwork, both within our organization and in partnership with our clients, to achieve exceptional results.</p>
+                </div>
+                
+                <!-- Value 5 -->
+                <div class="value-card">
+                    <div class="value-icon">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <h3>Continuous Learning</h3>
+                    <p>We are committed to ongoing education and skill development to stay at the forefront of AI and marketing innovations.</p>
+                </div>
+                
+                <!-- Value 6 -->
+                <div class="value-card">
+                    <div class="value-icon">
+                        <i class="fas fa-heart"></i>
+                    </div>
+                    <h3>Client-Centric</h3>
+                    <p>We put our clients' needs and goals at the center of everything we do, tailoring our strategies to their unique requirements.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Team Section -->
+    <section class="team-section">
+        <div class="container">
+            <div class="section-title">
+                <h2>Meet Our Team</h2>
+                <p>The talented professionals behind our success</p>
+            </div>
+            
+            <div class="team-grid">
+                <!-- Team Member 1 -->
+                <div class="team-member">
+                    <div class="team-member-image">
+                        <img src="images/team-1.svg" alt="Manish Kumar">
+                    </div>
+                    <div class="team-member-content">
+                        <h3>Manish Kumar</h3>
+                        <span class="team-member-position">Co-Founder & CEO</span>
+                        <p>With over 15 years of experience in digital marketing and a background in AI research, Manish leads our strategic vision and innovation initiatives.</p>
+                        <div class="team-member-social">
+                            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+                            <a href="#"><i class="fas fa-envelope"></i></a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Team Member 2 -->
+                <div class="team-member">
+                    <div class="team-member-image">
+                        <img src="images/team-2.svg" alt="Kavita Sharma">
+                    </div>
+                    <div class="team-member-content">
+                        <h3>Kavita Sharma</h3>
+                        <span class="team-member-position">Co-Founder & CTO</span>
+                        <p>A pioneer in AI applications for marketing, Kavita oversees our technology development and ensures we stay at the cutting edge of innovation.</p>
+                        <div class="team-member-social">
+                            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+                            <a href="#"><i class="fas fa-envelope"></i></a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Team Member 3 -->
+                <div class="team-member">
+                    <div class="team-member-image">
+                        <img src="images/team-3.svg" alt="Rahul Verma">
+                    </div>
+                    <div class="team-member-content">
+                        <h3>Rahul Verma</h3>
+                        <span class="team-member-position">Head of SEO</span>
+                        <p>Rahul combines traditional SEO expertise with AI-driven strategies to help our clients achieve top rankings and increased organic traffic.</p>
+                        <div class="team-member-social">
+                            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+                            <a href="#"><i class="fas fa-envelope"></i></a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Team Member 4 -->
+                <div class="team-member">
+                    <div class="team-member-image">
+                        <img src="images/team-4.svg" alt="Priya Patel">
+                    </div>
+                    <div class="team-member-content">
+                        <h3>Priya Patel</h3>
+                        <span class="team-member-position">Creative Director</span>
+                        <p>With a background in design and digital marketing, Priya leads our creative team in developing visually stunning and effective marketing assets.</p>
+                        <div class="team-member-social">
+                            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+                            <a href="#"><i class="fas fa-envelope"></i></a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Team Member 5 -->
+                <div class="team-member">
+                    <div class="team-member-image">
+                        <img src="images/team-5.svg" alt="Arjun Singh">
+                    </div>
+                    <div class="team-member-content">
+                        <h3>Arjun Singh</h3>
+                        <span class="team-member-position">AI Research Lead</span>
+                        <p>Arjun heads our AI research division, developing proprietary algorithms and tools that give our clients a competitive edge in the market.</p>
+                        <div class="team-member-social">
+                            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+                            <a href="#"><i class="fas fa-envelope"></i></a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Team Member 6 -->
+                <div class="team-member">
+                    <div class="team-member-image">
+                        <img src="images/team-6.svg" alt="Neha Gupta">
+                    </div>
+                    <div class="team-member-content">
+                        <h3>Neha Gupta</h3>
+                        <span class="team-member-position">Client Success Manager</span>
+                        <p>Neha ensures our clients receive exceptional service and results, acting as the bridge between our technical teams and client needs.</p>
+                        <div class="team-member-social">
+                            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+                            <a href="#"><i class="fas fa-envelope"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Info Section -->
+    <section class="section">
+        <div class="container">
+            <div class="section-title">
+                <h2>Our Location</h2>
+                <p>Visit us at our headquarters in Bangalore</p>
+            </div>
+            
+            <div class="contact-info-grid">
+                <div class="contact-info-map">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3887.9977290124245!2d77.63748491482186!3d12.97566999085!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae1670c9b44e6d%3A0xf8dfc3e8517e4fe0!2sIndiranagar%2C%20Bengaluru%2C%20Karnataka%2C%20India!5e0!3m2!1sen!2sin!4v1623825234354!5m2!1sen!2sin" width="100%" height="450" style="border:0; border-radius: var(--border-radius-lg);" allowfullscreen="" loading="lazy"></iframe>
+                </div>
+                
+                <div class="contact-info-details">
+                    <div class="contact-info-item">
+                        <div class="contact-info-icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <div>
+                            <h3>Address</h3>
+                            <p>123 Tech Park, Indiranagar<br>Bangalore, Karnataka 560038<br>India</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-info-item">
+                        <div class="contact-info-icon">
+                            <i class="fas fa-phone"></i>
+                        </div>
+                        <div>
+                            <h3>Phone</h3>
+                            <p>+91 98765 43210<br>+91 80 4567 8901</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-info-item">
+                        <div class="contact-info-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <div>
+                            <h3>Email</h3>
+                            <p>info@mkdigital.com<br>support@mkdigital.com</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-info-item">
+                        <div class="contact-info-icon">
+                            <i class="fas fa-clock"></i>
+                        </div>
+                        <div>
+                            <h3>Working Hours</h3>
+                            <p>Monday - Friday: 9:00 AM - 6:00 PM<br>Saturday: 10:00 AM - 2:00 PM<br>Sunday: Closed</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="container">
+            <div class="cta-content">
+                <h2>Ready to Transform Your Digital Marketing?</h2>
+                <p>Let's discuss how our AI-powered marketing solutions can help your business achieve remarkable growth.</p>
+                <a href="contact.html" class="btn btn-light btn-lg">Get in Touch</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <h2>MK<span>Digital</span></h2>
+                    <p>No.1 AI Marketing Agency in India, transforming businesses with innovative digital marketing solutions powered by artificial intelligence.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-links">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="portfolio.html">Portfolio</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-services">
+                    <h3>Our Services</h3>
+                    <ul>
+                        <li><a href="services.html#seo">SEO Marketing</a></li>
+                        <li><a href="services.html#automation">Marketing Automation</a></li>
+                        <li><a href="services.html#ai-agents">AI Agent Services</a></li>
+                        <li><a href="services.html#web-dev">Website Development</a></li>
+                        <li><a href="services.html#content">Content Marketing</a></li>
+                        <li><a href="services.html#social">Social Media Marketing</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-newsletter">
+                    <h3>Contact Us</h3>
+                    <p><i class="fas fa-map-marker-alt"></i> 123 Tech Park, Bangalore, India</p>
+                    <p><i class="fas fa-phone"></i> +91 98765 43210</p>
+                    <p><i class="fas fa-envelope"></i> info@mkdigital.com</p>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2023 MKDigital. All Rights Reserved. | No.1 AI Marketing Agency in India</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <a href="#" class="back-to-top"><i class="fas fa-arrow-up"></i></a>
+
+    <!-- JavaScript -->
+    <script src="js/script.js"></script>
+</body>
+</html>

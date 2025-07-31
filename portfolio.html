@@ -1,0 +1,573 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Explore MKDigital's portfolio of successful AI-powered marketing projects, case studies, and client success stories.">
+    <meta name="keywords" content="AI Marketing Portfolio, Digital Marketing Case Studies, Marketing Success Stories, AI Marketing Projects, MKDigital Portfolio">
+    <title>Portfolio - MKDigital | No.1 AI Marketing Agency in India</title>
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="images/favicon.ico">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    
+    <style>
+        /* Additional styles specific to portfolio page */
+        .portfolio-filters {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-bottom: var(--spacing-xl);
+            gap: var(--spacing-sm);
+        }
+        
+        .portfolio-filter-btn {
+            padding: 8px 20px;
+            background-color: var(--light-color);
+            border: 1px solid var(--gray-200);
+            border-radius: var(--border-radius-sm);
+            color: var(--gray-700);
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        
+        .portfolio-filter-btn:hover {
+            background-color: var(--gray-100);
+        }
+        
+        .portfolio-filter-btn.active {
+            background-color: var(--primary-color);
+            color: white;
+            border-color: var(--primary-color);
+        }
+        
+        .portfolio-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+            gap: var(--spacing-lg);
+        }
+        
+        .portfolio-item {
+            border-radius: var(--border-radius-lg);
+            overflow: hidden;
+            box-shadow: var(--shadow-md);
+            transition: all 0.3s ease;
+            position: relative;
+        }
+        
+        .portfolio-item:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-lg);
+        }
+        
+        .portfolio-item img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+            display: block;
+        }
+        
+        .portfolio-item-content {
+            padding: var(--spacing-lg);
+            background-color: white;
+        }
+        
+        .portfolio-item-content h3 {
+            margin-bottom: var(--spacing-xs);
+            font-size: 1.4rem;
+        }
+        
+        .portfolio-item-category {
+            color: var(--primary-color);
+            font-size: 0.9rem;
+            margin-bottom: var(--spacing-sm);
+            display: block;
+        }
+        
+        .portfolio-item-content p {
+            margin-bottom: var(--spacing-md);
+            color: var(--gray-700);
+        }
+        
+        .portfolio-item-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 250px;
+            background-color: rgba(0, 0, 0, 0.7);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            opacity: 0;
+            transition: all 0.3s ease;
+        }
+        
+        .portfolio-item:hover .portfolio-item-overlay {
+            opacity: 1;
+        }
+        
+        .case-study-section {
+            padding: var(--spacing-xxl) 0;
+            background-color: var(--light-color);
+        }
+        
+        .case-study {
+            background-color: white;
+            border-radius: var(--border-radius-lg);
+            overflow: hidden;
+            box-shadow: var(--shadow-md);
+            margin-bottom: var(--spacing-xl);
+        }
+        
+        .case-study:last-child {
+            margin-bottom: 0;
+        }
+        
+        .case-study-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+        }
+        
+        .case-study-image {
+            height: 100%;
+        }
+        
+        .case-study-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+        
+        .case-study-content {
+            padding: var(--spacing-xl);
+        }
+        
+        .case-study-content h3 {
+            margin-bottom: var(--spacing-sm);
+            font-size: 1.8rem;
+        }
+        
+        .case-study-category {
+            color: var(--primary-color);
+            font-size: 1rem;
+            margin-bottom: var(--spacing-md);
+            display: block;
+        }
+        
+        .case-study-stats {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: var(--spacing-md);
+            margin: var(--spacing-lg) 0;
+        }
+        
+        .case-study-stat {
+            text-align: center;
+            padding: var(--spacing-md);
+            background-color: var(--light-color);
+            border-radius: var(--border-radius-md);
+        }
+        
+        .case-study-stat h4 {
+            font-size: 2rem;
+            color: var(--primary-color);
+            margin-bottom: var(--spacing-xs);
+        }
+        
+        .case-study-stat p {
+            font-size: 0.9rem;
+            color: var(--gray-700);
+        }
+        
+        @media (max-width: 992px) {
+            .case-study-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .case-study-image {
+                height: 300px;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .portfolio-grid {
+                grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="navbar">
+                <a href="index.html" class="logo">MK<span>Digital</span></a>
+                
+                <ul class="nav-menu">
+                    <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
+                    <li class="nav-item"><a href="services.html" class="nav-link">Services</a></li>
+                    <li class="nav-item"><a href="portfolio.html" class="nav-link active">Portfolio</a></li>
+                    <li class="nav-item"><a href="about.html" class="nav-link">About</a></li>
+                    <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
+                    <li class="nav-item"><a href="contact.html" class="btn btn-primary btn-sm">Get a Quote</a></li>
+                </ul>
+                
+                <div class="hamburger">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Page Hero -->
+    <section class="about-hero">
+        <div class="container">
+            <h1>Our Portfolio</h1>
+            <p>Explore our successful projects and see how we've helped businesses achieve remarkable growth through AI-powered marketing strategies.</p>
+        </div>
+    </section>
+
+    <!-- Portfolio Section -->
+    <section class="section">
+        <div class="container">
+            <div class="section-title">
+                <h2>Our Work</h2>
+                <p>Showcasing our best AI marketing projects and success stories</p>
+            </div>
+            
+            <div class="portfolio-filters">
+                <button class="portfolio-filter-btn active" data-filter="all">All Projects</button>
+                <button class="portfolio-filter-btn" data-filter="seo">SEO</button>
+                <button class="portfolio-filter-btn" data-filter="automation">Automation</button>
+                <button class="portfolio-filter-btn" data-filter="ai-agents">AI Agents</button>
+                <button class="portfolio-filter-btn" data-filter="web-dev">Web Development</button>
+                <button class="portfolio-filter-btn" data-filter="content">Content</button>
+                <button class="portfolio-filter-btn" data-filter="social">Social Media</button>
+            </div>
+            
+            <div class="portfolio-grid">
+                <!-- Portfolio Item 1 -->
+                <div class="portfolio-item" data-category="seo web-dev">
+                    <img src="images/portfolio-1.svg" alt="TechGuru E-commerce SEO Project">
+                    <div class="portfolio-item-overlay">
+                        <a href="#case-study-1" class="btn btn-primary">View Case Study</a>
+                    </div>
+                    <div class="portfolio-item-content">
+                        <span class="portfolio-item-category">SEO, Web Development</span>
+                        <h3>TechGuru E-commerce</h3>
+                        <p>Increased organic traffic by 187% and conversion rates by 43% through AI-driven SEO strategies and website optimization.</p>
+                        <a href="#case-study-1" class="btn btn-sm btn-outline">Read More</a>
+                    </div>
+                </div>
+                
+                <!-- Portfolio Item 2 -->
+                <div class="portfolio-item" data-category="automation content">
+                    <img src="images/portfolio-2.svg" alt="HealthPlus Marketing Automation">
+                    <div class="portfolio-item-overlay">
+                        <a href="#case-study-2" class="btn btn-primary">View Case Study</a>
+                    </div>
+                    <div class="portfolio-item-content">
+                        <span class="portfolio-item-category">Marketing Automation, Content</span>
+                        <h3>HealthPlus Wellness</h3>
+                        <p>Implemented an AI-powered marketing automation system that increased lead generation by 78% and reduced customer acquisition costs by 35%.</p>
+                        <a href="#case-study-2" class="btn btn-sm btn-outline">Read More</a>
+                    </div>
+                </div>
+                
+                <!-- Portfolio Item 3 -->
+                <div class="portfolio-item" data-category="ai-agents social">
+                    <img src="images/portfolio-3.svg" alt="FashionNova AI Chatbot Implementation">
+                    <div class="portfolio-item-overlay">
+                        <a href="#" class="btn btn-primary">View Case Study</a>
+                    </div>
+                    <div class="portfolio-item-content">
+                        <span class="portfolio-item-category">AI Agents, Social Media</span>
+                        <h3>FashionNova Retail</h3>
+                        <p>Deployed AI chatbots across website and social channels, resulting in 24/7 customer support and a 67% increase in customer satisfaction scores.</p>
+                        <a href="#" class="btn btn-sm btn-outline">Read More</a>
+                    </div>
+                </div>
+                
+                <!-- Portfolio Item 4 -->
+                <div class="portfolio-item" data-category="web-dev content">
+                    <img src="images/portfolio-4.svg" alt="EduSmart Website Redesign">
+                    <div class="portfolio-item-overlay">
+                        <a href="#" class="btn btn-primary">View Case Study</a>
+                    </div>
+                    <div class="portfolio-item-content">
+                        <span class="portfolio-item-category">Web Development, Content</span>
+                        <h3>EduSmart Learning</h3>
+                        <p>Complete website redesign with AI-generated content strategy that increased student enrollments by 56% and reduced bounce rates by 42%.</p>
+                        <a href="#" class="btn btn-sm btn-outline">Read More</a>
+                    </div>
+                </div>
+                
+                <!-- Portfolio Item 5 -->
+                <div class="portfolio-item" data-category="seo social">
+                    <img src="images/portfolio-5.svg" alt="TravelWise SEO and Social Media Campaign">
+                    <div class="portfolio-item-overlay">
+                        <a href="#" class="btn btn-primary">View Case Study</a>
+                    </div>
+                    <div class="portfolio-item-content">
+                        <span class="portfolio-item-category">SEO, Social Media</span>
+                        <h3>TravelWise Adventures</h3>
+                        <p>Comprehensive SEO and social media strategy that increased bookings by 124% and social engagement by 287% within six months.</p>
+                        <a href="#" class="btn btn-sm btn-outline">Read More</a>
+                    </div>
+                </div>
+                
+                <!-- Portfolio Item 6 -->
+                <div class="portfolio-item" data-category="automation ai-agents">
+                    <img src="images/portfolio-6.svg" alt="FinTech AI-Powered Lead Generation">
+                    <div class="portfolio-item-overlay">
+                        <a href="#" class="btn btn-primary">View Case Study</a>
+                    </div>
+                    <div class="portfolio-item-content">
+                        <span class="portfolio-item-category">Automation, AI Agents</span>
+                        <h3>FinTech Solutions</h3>
+                        <p>AI-powered lead generation and nurturing system that increased qualified leads by 93% and improved sales team efficiency by 47%.</p>
+                        <a href="#" class="btn btn-sm btn-outline">Read More</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Case Studies Section -->
+    <section class="case-study-section">
+        <div class="container">
+            <div class="section-title">
+                <h2>Featured Case Studies</h2>
+                <p>Detailed insights into our most successful client projects</p>
+            </div>
+            
+            <!-- Case Study 1 -->
+            <div id="case-study-1" class="case-study">
+                <div class="case-study-grid">
+                    <div class="case-study-content">
+                        <span class="case-study-category">SEO & Web Development</span>
+                        <h3>TechGuru E-commerce: AI-Driven SEO Transformation</h3>
+                        <p>TechGuru, a leading electronics retailer, was struggling with declining organic traffic and poor conversion rates on their e-commerce platform. They approached MKDigital to revitalize their online presence and improve their search engine rankings.</p>
+                        
+                        <div class="case-study-stats">
+                            <div class="case-study-stat">
+                                <h4>187%</h4>
+                                <p>Increase in Organic Traffic</p>
+                            </div>
+                            <div class="case-study-stat">
+                                <h4>43%</h4>
+                                <p>Improvement in Conversion Rate</p>
+                            </div>
+                            <div class="case-study-stat">
+                                <h4>68%</h4>
+                                <p>Increase in Revenue</p>
+                            </div>
+                            <div class="case-study-stat">
+                                <h4>5.2s</h4>
+                                <p>Reduction in Page Load Time</p>
+                            </div>
+                        </div>
+                        
+                        <p>Our approach combined technical SEO optimization, AI-driven keyword research, and a complete website redesign focused on user experience and conversion optimization. We implemented:</p>
+                        <ul>
+                            <li>Comprehensive technical SEO audit and optimization</li>
+                            <li>AI-powered keyword research and content strategy</li>
+                            <li>Responsive website redesign with improved UX/UI</li>
+                            <li>Advanced schema markup implementation</li>
+                            <li>Performance optimization for faster page loading</li>
+                        </ul>
+                        
+                        <a href="#" class="btn btn-primary">Download Full Case Study</a>
+                    </div>
+                    
+                    <div class="case-study-image">
+                        <img src="images/case-study-1.svg" alt="TechGuru E-commerce SEO Case Study">
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Case Study 2 -->
+            <div id="case-study-2" class="case-study">
+                <div class="case-study-grid">
+                    <div class="case-study-image">
+                        <img src="images/case-study-2.svg" alt="HealthPlus Marketing Automation Case Study">
+                    </div>
+                    
+                    <div class="case-study-content">
+                        <span class="case-study-category">Marketing Automation & Content</span>
+                        <h3>HealthPlus Wellness: Automated Marketing Success</h3>
+                        <p>HealthPlus Wellness, a chain of premium fitness centers, wanted to streamline their marketing efforts and improve lead generation. They partnered with MKDigital to implement an AI-powered marketing automation system.</p>
+                        
+                        <div class="case-study-stats">
+                            <div class="case-study-stat">
+                                <h4>78%</h4>
+                                <p>Increase in Lead Generation</p>
+                            </div>
+                            <div class="case-study-stat">
+                                <h4>35%</h4>
+                                <p>Reduction in Customer Acquisition Cost</p>
+                            </div>
+                            <div class="case-study-stat">
+                                <h4>62%</h4>
+                                <p>Improvement in Email Open Rates</p>
+                            </div>
+                            <div class="case-study-stat">
+                                <h4>41%</h4>
+                                <p>Increase in Membership Sign-ups</p>
+                            </div>
+                        </div>
+                        
+                        <p>Our comprehensive marketing automation solution included:</p>
+                        <ul>
+                            <li>AI-powered lead scoring and segmentation</li>
+                            <li>Personalized email marketing campaigns</li>
+                            <li>Automated customer journey mapping</li>
+                            <li>Content strategy with AI-generated fitness tips</li>
+                            <li>Integration with CRM and membership systems</li>
+                        </ul>
+                        
+                        <a href="#" class="btn btn-primary">Download Full Case Study</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="section">
+        <div class="container">
+            <div class="section-title">
+                <h2>Client Testimonials</h2>
+                <p>What our clients say about working with us</p>
+            </div>
+            
+            <div class="testimonials-slider">
+                <!-- Testimonial 1 -->
+                <div class="testimonial-card">
+                    <div class="testimonial-content">
+                        <p>"MKDigital transformed our online presence with their AI-powered SEO strategies. Our organic traffic has increased by 187%, and our conversion rates have never been better. Their team's expertise and innovative approach have been invaluable to our business growth."</p>
+                    </div>
+                    <div class="testimonial-author">
+                        <img src="images/testimonial-1.svg" alt="Rajesh Kumar">
+                        <div>
+                            <h4>Rajesh Kumar</h4>
+                            <p>CEO, TechGuru</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Testimonial 2 -->
+                <div class="testimonial-card">
+                    <div class="testimonial-content">
+                        <p>"The marketing automation system implemented by MKDigital has revolutionized how we attract and retain members. We've seen a 78% increase in leads and a significant reduction in our customer acquisition costs. Their team's attention to detail and commitment to results is exceptional."</p>
+                    </div>
+                    <div class="testimonial-author">
+                        <img src="images/testimonial-2.svg" alt="Priya Sharma">
+                        <div>
+                            <h4>Priya Sharma</h4>
+                            <p>Marketing Director, HealthPlus Wellness</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Testimonial 3 -->
+                <div class="testimonial-card">
+                    <div class="testimonial-content">
+                        <p>"The AI chatbots developed by MKDigital have transformed our customer service capabilities. We now offer 24/7 support across all channels, and our customer satisfaction scores have increased by 67%. Their innovative approach to AI implementation has been a game-changer for our business."</p>
+                    </div>
+                    <div class="testimonial-author">
+                        <img src="images/testimonial-3.svg" alt="Ananya Patel">
+                        <div>
+                            <h4>Ananya Patel</h4>
+                            <p>CTO, FashionNova Retail</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="container">
+            <div class="cta-content">
+                <h2>Ready to Transform Your Digital Marketing?</h2>
+                <p>Let's discuss how our AI-powered marketing solutions can help your business achieve remarkable growth.</p>
+                <a href="contact.html" class="btn btn-light btn-lg">Get in Touch</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <h2>MK<span>Digital</span></h2>
+                    <p>No.1 AI Marketing Agency in India, transforming businesses with innovative digital marketing solutions powered by artificial intelligence.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-links">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="portfolio.html">Portfolio</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-services">
+                    <h3>Our Services</h3>
+                    <ul>
+                        <li><a href="services.html#seo">SEO Marketing</a></li>
+                        <li><a href="services.html#automation">Marketing Automation</a></li>
+                        <li><a href="services.html#ai-agents">AI Agent Services</a></li>
+                        <li><a href="services.html#web-dev">Website Development</a></li>
+                        <li><a href="services.html#content">Content Marketing</a></li>
+                        <li><a href="services.html#social">Social Media Marketing</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-newsletter">
+                    <h3>Contact Us</h3>
+                    <p><i class="fas fa-map-marker-alt"></i> 123 Tech Park, Bangalore, India</p>
+                    <p><i class="fas fa-phone"></i> +91 98765 43210</p>
+                    <p><i class="fas fa-envelope"></i> info@mkdigital.com</p>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2023 MKDigital. All Rights Reserved. | No.1 AI Marketing Agency in India</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <a href="#" class="back-to-top"><i class="fas fa-arrow-up"></i></a>
+
+    <!-- JavaScript -->
+    <script src="js/script.js"></script>
+</body>
+</html>

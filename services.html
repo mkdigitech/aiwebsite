@@ -1,0 +1,657 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="MKDigital offers comprehensive AI-powered marketing services including SEO, Marketing Automation, AI Agent Services, Website Development, Content Marketing, and Social Media Marketing.">
+    <meta name="keywords" content="AI Marketing Services, SEO, Marketing Automation, AI Agent Services, Website Development, Content Marketing, Social Media Marketing, Digital Marketing India">
+    <title>Services - MKDigital | No.1 AI Marketing Agency in India</title>
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="images/favicon.ico">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    
+    <style>
+        /* Additional styles specific to services page */
+        .service-detail {
+            padding: var(--spacing-xxl) 0;
+            border-bottom: 1px solid var(--gray-200);
+        }
+        
+        .service-detail:last-child {
+            border-bottom: none;
+        }
+        
+        .service-detail-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: var(--spacing-xl);
+            align-items: center;
+        }
+        
+        .service-detail:nth-child(even) .service-detail-grid {
+            direction: rtl;
+        }
+        
+        .service-detail:nth-child(even) .service-detail-grid > * {
+            direction: ltr;
+        }
+        
+        .service-detail-content h2 {
+            margin-bottom: var(--spacing-md);
+            font-size: 2.2rem;
+        }
+        
+        .service-detail-content p {
+            margin-bottom: var(--spacing-lg);
+            color: var(--gray-700);
+        }
+        
+        .service-features {
+            margin-top: var(--spacing-lg);
+        }
+        
+        .service-feature-item {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: var(--spacing-md);
+        }
+        
+        .service-feature-icon {
+            color: var(--primary-color);
+            margin-right: var(--spacing-sm);
+            font-size: 1.2rem;
+        }
+        
+        .service-detail-image img {
+            border-radius: var(--border-radius-lg);
+            box-shadow: var(--shadow-lg);
+            width: 100%;
+        }
+        
+        .service-cta {
+            background-color: var(--light-color);
+            padding: var(--spacing-xl);
+            border-radius: var(--border-radius-lg);
+            margin-top: var(--spacing-xl);
+            text-align: center;
+        }
+        
+        .service-cta h3 {
+            margin-bottom: var(--spacing-md);
+        }
+        
+        @media (max-width: 992px) {
+            .service-detail-grid {
+                grid-template-columns: 1fr;
+                gap: var(--spacing-xl);
+            }
+            
+            .service-detail:nth-child(even) .service-detail-grid {
+                direction: ltr;
+            }
+            
+            .service-detail-image {
+                order: -1;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="navbar">
+                <a href="index.html" class="logo">MK<span>Digital</span></a>
+                
+                <ul class="nav-menu">
+                    <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
+                    <li class="nav-item"><a href="services.html" class="nav-link active">Services</a></li>
+                    <li class="nav-item"><a href="portfolio.html" class="nav-link">Portfolio</a></li>
+                    <li class="nav-item"><a href="about.html" class="nav-link">About</a></li>
+                    <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
+                    <li class="nav-item"><a href="contact.html" class="btn btn-primary btn-sm">Get a Quote</a></li>
+                </ul>
+                
+                <div class="hamburger">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Page Hero -->
+    <section class="about-hero">
+        <div class="container">
+            <h1>Our Services</h1>
+            <p>Discover our comprehensive range of AI-powered marketing solutions designed to transform your business and drive exceptional results.</p>
+        </div>
+    </section>
+
+    <!-- Services Overview -->
+    <section class="section">
+        <div class="container">
+            <div class="section-title">
+                <h2>What We Offer</h2>
+                <p>Cutting-edge AI marketing services tailored to your business needs</p>
+            </div>
+            
+            <div class="services-grid">
+                <!-- Service 1: SEO Marketing -->
+                <div class="service-card animate">
+                    <div class="service-icon">
+                        <i class="fas fa-search"></i>
+                    </div>
+                    <h3>SEO Marketing</h3>
+                    <p>AI-powered search engine optimization strategies to improve your visibility and drive organic traffic.</p>
+                    <a href="#seo" class="btn btn-sm btn-outline">Learn More</a>
+                </div>
+                
+                <!-- Service 2: Marketing Automation -->
+                <div class="service-card animate">
+                    <div class="service-icon">
+                        <i class="fas fa-robot"></i>
+                    </div>
+                    <h3>Marketing Automation</h3>
+                    <p>Streamline your marketing processes with intelligent automation tools that save time and increase efficiency.</p>
+                    <a href="#automation" class="btn btn-sm btn-outline">Learn More</a>
+                </div>
+                
+                <!-- Service 3: AI Agent Services -->
+                <div class="service-card animate">
+                    <div class="service-icon">
+                        <i class="fas fa-brain"></i>
+                    </div>
+                    <h3>AI Agent Services</h3>
+                    <p>Leverage the power of AI agents to enhance customer interactions and deliver personalized experiences.</p>
+                    <a href="#ai-agents" class="btn btn-sm btn-outline">Learn More</a>
+                </div>
+                
+                <!-- Service 4: Website Development -->
+                <div class="service-card animate">
+                    <div class="service-icon">
+                        <i class="fas fa-laptop-code"></i>
+                    </div>
+                    <h3>Website Development</h3>
+                    <p>Custom website solutions designed to convert visitors into customers with modern UI/UX principles.</p>
+                    <a href="#web-dev" class="btn btn-sm btn-outline">Learn More</a>
+                </div>
+                
+                <!-- Service 5: Content Marketing -->
+                <div class="service-card animate">
+                    <div class="service-icon">
+                        <i class="fas fa-pen-fancy"></i>
+                    </div>
+                    <h3>Content Marketing</h3>
+                    <p>AI-generated content strategies that engage your audience and establish your brand as an industry leader.</p>
+                    <a href="#content" class="btn btn-sm btn-outline">Learn More</a>
+                </div>
+                
+                <!-- Service 6: Social Media Marketing -->
+                <div class="service-card animate">
+                    <div class="service-icon">
+                        <i class="fas fa-share-alt"></i>
+                    </div>
+                    <h3>Social Media Marketing</h3>
+                    <p>Data-driven social media campaigns that boost engagement and build meaningful connections with your audience.</p>
+                    <a href="#social" class="btn btn-sm btn-outline">Learn More</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Detailed Service Sections -->
+    <!-- SEO Marketing -->
+    <section id="seo" class="service-detail">
+        <div class="container">
+            <div class="service-detail-grid">
+                <div class="service-detail-content">
+                    <h2>SEO Marketing</h2>
+                    <p>Our AI-powered SEO strategies go beyond traditional keyword optimization. We leverage machine learning algorithms to analyze search patterns, competitor strategies, and user behavior to create a comprehensive SEO approach that delivers sustainable results.</p>
+                    <p>With our advanced AI tools, we can predict search trends, identify content gaps, and optimize your website structure to maximize organic visibility and traffic.</p>
+                    
+                    <div class="service-features">
+                        <div class="service-feature-item">
+                            <div class="service-feature-icon">
+                                <i class="fas fa-check-circle"></i>
+                            </div>
+                            <div>
+                                <strong>AI-Powered Keyword Research</strong> - Discover high-value keywords with advanced semantic analysis
+                            </div>
+                        </div>
+                        <div class="service-feature-item">
+                            <div class="service-feature-icon">
+                                <i class="fas fa-check-circle"></i>
+                            </div>
+                            <div>
+                                <strong>Technical SEO Optimization</strong> - Comprehensive site audits and performance improvements
+                            </div>
+                        </div>
+                        <div class="service-feature-item">
+                            <div class="service-feature-icon">
+                                <i class="fas fa-check-circle"></i>
+                            </div>
+                            <div>
+                                <strong>Content Optimization</strong> - AI-driven content recommendations that satisfy search intent
+                            </div>
+                        </div>
+                        <div class="service-feature-item">
+                            <div class="service-feature-icon">
+                                <i class="fas fa-check-circle"></i>
+                            </div>
+                            <div>
+                                <strong>Local SEO Strategies</strong> - Dominate local search results with targeted optimization
+                            </div>
+                        </div>
+                        <div class="service-feature-item">
+                            <div class="service-feature-icon">
+                                <i class="fas fa-check-circle"></i>
+                            </div>
+                            <div>
+                                <strong>Predictive SEO</strong> - Stay ahead of algorithm changes with AI-based forecasting
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <a href="contact.html" class="btn btn-primary">Get Started with SEO</a>
+                </div>
+                
+                <div class="service-detail-image">
+                    <img src="images/seo-service.svg" alt="AI-Powered SEO Marketing">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Marketing Automation -->
+    <section id="automation" class="service-detail">
+        <div class="container">
+            <div class="service-detail-grid">
+                <div class="service-detail-content">
+                    <h2>Marketing Automation</h2>
+                    <p>Transform your marketing operations with our intelligent automation solutions. Our AI-powered marketing automation platform streamlines repetitive tasks, nurtures leads, and delivers personalized content at scale, allowing your team to focus on strategy and creativity.</p>
+                    <p>We design custom automation workflows that adapt to customer behavior in real-time, ensuring the right message reaches the right person at the perfect moment.</p>
+                    
+                    <div class="service-features">
+                        <div class="service-feature-item">
+                            <div class="service-feature-icon">
+                                <i class="fas fa-check-circle"></i>
+                            </div>
+                            <div>
+                                <strong>Intelligent Lead Scoring</strong> - Prioritize prospects based on AI-predicted conversion likelihood
+                            </div>
+                        </div>
+                        <div class="service-feature-item">
+                            <div class="service-feature-icon">
+                                <i class="fas fa-check-circle"></i>
+                            </div>
+                            <div>
+                                <strong>Adaptive Email Campaigns</strong> - Self-optimizing email sequences that improve over time
+                            </div>
+                        </div>
+                        <div class="service-feature-item">
+                            <div class="service-feature-icon">
+                                <i class="fas fa-check-circle"></i>
+                            </div>
+                            <div>
+                                <strong>Customer Journey Mapping</strong> - Visualize and optimize every touchpoint in the customer experience
+                            </div>
+                        </div>
+                        <div class="service-feature-item">
+                            <div class="service-feature-icon">
+                                <i class="fas fa-check-circle"></i>
+                            </div>
+                            <div>
+                                <strong>Behavioral Trigger Campaigns</strong> - Automatically engage users based on their actions
+                            </div>
+                        </div>
+                        <div class="service-feature-item">
+                            <div class="service-feature-icon">
+                                <i class="fas fa-check-circle"></i>
+                            </div>
+                            <div>
+                                <strong>Performance Analytics</strong> - Comprehensive reporting with actionable insights
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <a href="contact.html" class="btn btn-primary">Automate Your Marketing</a>
+                </div>
+                
+                <div class="service-detail-image">
+                    <img src="images/automation-service.svg" alt="AI Marketing Automation">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- AI Agent Services -->
+    <section id="ai-agents" class="service-detail">
+        <div class="container">
+            <div class="service-detail-grid">
+                <div class="service-detail-content">
+                    <h2>AI Agent Services</h2>
+                    <p>Revolutionize your customer interactions with our advanced AI agents. These intelligent virtual assistants provide 24/7 support, personalized recommendations, and seamless engagement across multiple channels, enhancing customer satisfaction while reducing operational costs.</p>
+                    <p>Our AI agents continuously learn from interactions, becoming more effective over time and providing valuable insights into customer preferences and pain points.</p>
+                    
+                    <div class="service-features">
+                        <div class="service-feature-item">
+                            <div class="service-feature-icon">
+                                <i class="fas fa-check-circle"></i>
+                            </div>
+                            <div>
+                                <strong>Conversational AI Chatbots</strong> - Natural language processing for human-like interactions
+                            </div>
+                        </div>
+                        <div class="service-feature-item">
+                            <div class="service-feature-icon">
+                                <i class="fas fa-check-circle"></i>
+                            </div>
+                            <div>
+                                <strong>Multi-channel Support</strong> - Consistent experience across website, social media, and messaging apps
+                            </div>
+                        </div>
+                        <div class="service-feature-item">
+                            <div class="service-feature-icon">
+                                <i class="fas fa-check-circle"></i>
+                            </div>
+                            <div>
+                                <strong>Personalized Recommendations</strong> - AI-driven product and content suggestions
+                            </div>
+                        </div>
+                        <div class="service-feature-item">
+                            <div class="service-feature-icon">
+                                <i class="fas fa-check-circle"></i>
+                            </div>
+                            <div>
+                                <strong>Sentiment Analysis</strong> - Real-time emotion detection and appropriate response adaptation
+                            </div>
+                        </div>
+                        <div class="service-feature-item">
+                            <div class="service-feature-icon">
+                                <i class="fas fa-check-circle"></i>
+                            </div>
+                            <div>
+                                <strong>Seamless Human Handoff</strong> - Intelligent escalation to human agents when needed
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <a href="contact.html" class="btn btn-primary">Deploy AI Agents</a>
+                </div>
+                
+                <div class="service-detail-image">
+                    <img src="images/ai-agents-service.svg" alt="AI Agent Services">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Website Development -->
+    <section id="web-dev" class="service-detail">
+        <div class="container">
+            <div class="service-detail-grid">
+                <div class="service-detail-content">
+                    <h2>Website Development</h2>
+                    <p>We create stunning, high-performance websites that combine cutting-edge design with conversion-focused functionality. Our development process integrates AI tools for user behavior analysis, ensuring your site delivers an exceptional user experience that drives business results.</p>
+                    <p>From responsive e-commerce platforms to corporate websites and custom web applications, our team delivers solutions that stand out in today's competitive digital landscape.</p>
+                    
+                    <div class="service-features">
+                        <div class="service-feature-item">
+                            <div class="service-feature-icon">
+                                <i class="fas fa-check-circle"></i>
+                            </div>
+                            <div>
+                                <strong>Responsive Design</strong> - Flawless performance across all devices and screen sizes
+                            </div>
+                        </div>
+                        <div class="service-feature-item">
+                            <div class="service-feature-icon">
+                                <i class="fas fa-check-circle"></i>
+                            </div>
+                            <div>
+                                <strong>UX/UI Excellence</strong> - User-centered design that enhances engagement and conversions
+                            </div>
+                        </div>
+                        <div class="service-feature-item">
+                            <div class="service-feature-icon">
+                                <i class="fas fa-check-circle"></i>
+                            </div>
+                            <div>
+                                <strong>Performance Optimization</strong> - Lightning-fast loading speeds and smooth interactions
+                            </div>
+                        </div>
+                        <div class="service-feature-item">
+                            <div class="service-feature-icon">
+                                <i class="fas fa-check-circle"></i>
+                            </div>
+                            <div>
+                                <strong>E-commerce Solutions</strong> - Feature-rich online stores with seamless checkout experiences
+                            </div>
+                        </div>
+                        <div class="service-feature-item">
+                            <div class="service-feature-icon">
+                                <i class="fas fa-check-circle"></i>
+                            </div>
+                            <div>
+                                <strong>CMS Integration</strong> - Easy content management with custom WordPress or other CMS solutions
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <a href="contact.html" class="btn btn-primary">Start Your Web Project</a>
+                </div>
+                
+                <div class="service-detail-image">
+                    <img src="images/web-dev-service.svg" alt="Website Development Services">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Content Marketing -->
+    <section id="content" class="service-detail">
+        <div class="container">
+            <div class="service-detail-grid">
+                <div class="service-detail-content">
+                    <h2>Content Marketing</h2>
+                    <p>Our AI-powered content marketing strategies help you create compelling, relevant content that resonates with your target audience. We leverage advanced language models to generate ideas, optimize existing content, and predict trending topics in your industry.</p>
+                    <p>From blog posts and whitepapers to videos and infographics, we develop content that establishes your authority, drives engagement, and converts visitors into customers.</p>
+                    
+                    <div class="service-features">
+                        <div class="service-feature-item">
+                            <div class="service-feature-icon">
+                                <i class="fas fa-check-circle"></i>
+                            </div>
+                            <div>
+                                <strong>AI Content Strategy</strong> - Data-driven content planning aligned with business goals
+                            </div>
+                        </div>
+                        <div class="service-feature-item">
+                            <div class="service-feature-icon">
+                                <i class="fas fa-check-circle"></i>
+                            </div>
+                            <div>
+                                <strong>SEO-Optimized Content Creation</strong> - Engaging content that ranks well in search results
+                            </div>
+                        </div>
+                        <div class="service-feature-item">
+                            <div class="service-feature-icon">
+                                <i class="fas fa-check-circle"></i>
+                            </div>
+                            <div>
+                                <strong>Content Performance Analysis</strong> - Continuous optimization based on user engagement
+                            </div>
+                        </div>
+                        <div class="service-feature-item">
+                            <div class="service-feature-icon">
+                                <i class="fas fa-check-circle"></i>
+                            </div>
+                            <div>
+                                <strong>Multi-format Content</strong> - Blogs, videos, infographics, podcasts, and more
+                            </div>
+                        </div>
+                        <div class="service-feature-item">
+                            <div class="service-feature-icon">
+                                <i class="fas fa-check-circle"></i>
+                            </div>
+                            <div>
+                                <strong>Content Distribution</strong> - Strategic promotion across relevant channels
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <a href="contact.html" class="btn btn-primary">Elevate Your Content</a>
+                </div>
+                
+                <div class="service-detail-image">
+                    <img src="images/content-service.svg" alt="AI Content Marketing">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Social Media Marketing -->
+    <section id="social" class="service-detail">
+        <div class="container">
+            <div class="service-detail-grid">
+                <div class="service-detail-content">
+                    <h2>Social Media Marketing</h2>
+                    <p>Our data-driven social media marketing services help you build meaningful connections with your audience across all major platforms. We use AI to analyze trends, optimize posting schedules, and create engaging content that drives conversations and conversions.</p>
+                    <p>From community management to paid advertising campaigns, we develop comprehensive social media strategies that align with your business objectives and target audience preferences.</p>
+                    
+                    <div class="service-features">
+                        <div class="service-feature-item">
+                            <div class="service-feature-icon">
+                                <i class="fas fa-check-circle"></i>
+                            </div>
+                            <div>
+                                <strong>Platform-Specific Strategies</strong> - Tailored approaches for each social network
+                            </div>
+                        </div>
+                        <div class="service-feature-item">
+                            <div class="service-feature-icon">
+                                <i class="fas fa-check-circle"></i>
+                            </div>
+                            <div>
+                                <strong>AI-Powered Content Creation</strong> - Engaging posts optimized for each platform
+                            </div>
+                        </div>
+                        <div class="service-feature-item">
+                            <div class="service-feature-icon">
+                                <i class="fas fa-check-circle"></i>
+                            </div>
+                            <div>
+                                <strong>Community Management</strong> - Active engagement and relationship building
+                            </div>
+                        </div>
+                        <div class="service-feature-item">
+                            <div class="service-feature-icon">
+                                <i class="fas fa-check-circle"></i>
+                            </div>
+                            <div>
+                                <strong>Targeted Advertising</strong> - Precision ad campaigns with advanced audience targeting
+                            </div>
+                        </div>
+                        <div class="service-feature-item">
+                            <div class="service-feature-icon">
+                                <i class="fas fa-check-circle"></i>
+                            </div>
+                            <div>
+                                <strong>Performance Analytics</strong> - Comprehensive reporting with actionable insights
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <a href="contact.html" class="btn btn-primary">Boost Your Social Presence</a>
+                </div>
+                
+                <div class="service-detail-image">
+                    <img src="images/social-service.svg" alt="Social Media Marketing">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Service CTA -->
+    <section class="section">
+        <div class="container">
+            <div class="service-cta">
+                <h3>Ready to Transform Your Marketing with AI?</h3>
+                <p>Contact us today for a free consultation and discover how our AI-powered marketing solutions can help your business grow.</p>
+                <a href="contact.html" class="btn btn-primary btn-lg">Get Started</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <h2>MK<span>Digital</span></h2>
+                    <p>No.1 AI Marketing Agency in India, transforming businesses with innovative digital marketing solutions powered by artificial intelligence.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-links">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="portfolio.html">Portfolio</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-services">
+                    <h3>Our Services</h3>
+                    <ul>
+                        <li><a href="#seo">SEO Marketing</a></li>
+                        <li><a href="#automation">Marketing Automation</a></li>
+                        <li><a href="#ai-agents">AI Agent Services</a></li>
+                        <li><a href="#web-dev">Website Development</a></li>
+                        <li><a href="#content">Content Marketing</a></li>
+                        <li><a href="#social">Social Media Marketing</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-newsletter">
+                    <h3>Contact Us</h3>
+                    <p><i class="fas fa-map-marker-alt"></i> 123 Tech Park, Bangalore, India</p>
+                    <p><i class="fas fa-phone"></i> +91 98765 43210</p>
+                    <p><i class="fas fa-envelope"></i> info@mkdigital.com</p>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2023 MKDigital. All Rights Reserved. | No.1 AI Marketing Agency in India</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <a href="#" class="back-to-top"><i class="fas fa-arrow-up"></i></a>
+
+    <!-- JavaScript -->
+    <script src="js/script.js"></script>
+</body>
+</html>
